@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login Page</title>
+    <script>
+        function ValidateForm() {
+            var unm = document.login.uname.value;
+            var pwd = document.login.pass.value;
+            if (unm == "abc" && pwd == "abc123") {
+                alert("Login Successful");
+                return false;
+            }
+            else {
+                alert("Login Failed, Please check UserName or Password");
+            }
+        }
+
+    </script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .myfont {
+            font-size: 20px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            padding-top:10px; 
+        }
+
+        .top-titlebar {
+            margin: 0px;
+            height: 50px;
+            width: 100%;
+            background-color: dimgray
+        }
+
+
+        .top-titlebar-logo {
+            color: floralwhite;
+            font-size: 30px;
+            padding: 0px 10px;
+
+        }
+
+        .top-titlebar-menu {
+            padding: 0px 20px;
+            margin: 0px;
+            float: right;
+        }
+
+        .top-titlebar-menu ul li {
+            margin: 0px;
+            display: inline-block;
+            padding: 0px 10px;
+            list-style: none;
+            line-height: 1px;
+        }
+
+        .top-titlebar-logoimg img {
+            width: 30px;
+            height: 30px;
+            padding: 5px 0px 0px 10px;
+        }
+
+        .inline {
+            display: inline-block;
+        }
+
+        .middle-main {
+            height: 700px;
+            width: 100%;
+            background-image: url("bglogin.jpg");
+            background-size: 100% 100%;
+            padding-top: 150px;
+            display: block;
+        }
+
+        .middle-main-border {
+            border: 2px solid rgb(89, 133, 163);
+            height: 500px;
+            width: 50%;
+            box-shadow: 5px 8px rgba(8, 6, 0, 0.664);
+            float: none;
+            margin: 0px 0px 0px 40px;
+            opacity: 0.85;
+            
+        }
+
+        .middle-left {
+            width: 50%;
+
+        }
+
+        .middle-left img {
+            height: 500px;
+            width: 100%;
+            float: left;
+            border-right: 2px solido black;
+
+        }
+
+        .middle-right {
+            background-color: rgb(89, 133, 163);
+            height: 500px;
+            width: 50%;
+            float: right;
+            font-family: verdana;
+            font-size: 30px;
+            text-align: center;
+        }
+
+
+
+        .middle-right form {
+            font-size: 24px;
+            font-family: 'Lucida Sans';
+        }
+
+        .middle-right form input[type=text] {
+            font-family: Geneva;
+            width: 250px;
+            height: 25px;
+            border-radius: 5px;
+
+        }
+
+        .middle-right form input[type=password] {
+            font-family: Geneva;
+            width: 250px;
+            height: 25px;
+            border-radius: 5px;
+        }
+
+        .middle-right form input[type=submit] {
+            width: 100px;
+            height: 40px;
+            font-family: 'Lucida Sans';
+            font-size: 20px;
+            font-style: oblique;
+            border: 2px solid rgb(53, 53, 53);
+            border-radius: 8px;
+        }
+
+        .middle-right form input[type=submit]:hover {
+            box-shadow: 2px 5px rgb(0, 0, 0);
+        }
+
+        .bottom {
+            height: 30px;
+            background-color: dimgrey;
+            font-family: Helvetica;
+            color: mediumblue;
+            text-align: center;
+            padding-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-titlebar">
+        <div class="top-titlebar-logoimg inline">
+            <img src="logo.png" alt="!Error">
+        </div>
+        <div class="top-titlebar-logo inline">
+            Flat Theams
+        </div>
+        <div class="top-titlebar-menu inline">
+            <ul>
+                <li>
+                    <a href="practice.html">Home | </a>
+                </li>
+                <li>
+                    <a href="about.html"> About | </a>
+                </li>
+                <li>
+                    <a href="contact.html"> Contact | </a>
+                </li>
+                <li>
+                    <a href="login.html"> Login | </a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="middle-main">
+        <div class="middle-main-border">
+            <div class="middle-left inline">
+                <img src="login.jpg" alt="!Error">
+            </div>
+            <div class="middle-right inline">
+                <img src="loginlogo.png" alt="" class="myfont"><br>
+                <b>
+                    <u>Login Page</u>
+                </b>
+                <br>
+                <br>
+                <form name="login" onsubmit="return ValidateForm();">
+                    UserName :
+                    <input type="text" name="uname" placeholder="UserName" required>
+                    <br>
+                    <br> Password :
+                    <input type="password" name="pass" placeholder="Password" required minlength="5">
+                    <br>
+                    <br>
+                    <input type="submit" value="Login">
+                    <br>
+                    <br>
+                    <a href="register.html" class="myfont">New Registration?</a>
+                    <a href="forgot.html" class="myfont">Forgot Password</a>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        © Copyright-2018 www.photography.com. All rights reserved. Developed by Sourabh J, Agile Soft System INC (AGSFT).
+    </div>
+
+</body>
+
+</html>
